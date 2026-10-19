@@ -87,38 +87,12 @@ Atualmente me dedico à construção de sites responsivos com foco em performanc
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
 
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
-            </div>
-            <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
-            </div>
+        <div class="formulario-contato">
+            <p class="grupo-form">Vamos conversar? Me chame no LinkedIn.</p>
 
-            <button type="submit" class="botao-form">Enviar Whatsapp</button>
-        </form>
+            <a class="botao-form" href="https://www.linkedin.com/in/eduardo-nogueira-b07545288/" target="_blank" rel="noopener noreferrer" style="display: block; text-align: center; text-decoration: none;">Falar no LinkedIn</a>
+        </div>
     </section>
-
-    <script>
-
-        function enviarWhats(event) {
-
-            event.preventDefault()
-
-        const nome = document.getElementById('nome').value;
-        const mensagem = document.getElementById('mensagem').value;
-        const telefone = '556799430297'
-
-        const texto = `Olá! Me chamo ${nome}, ${mensagem}`
-        const msgFormatada = encodeURIComponent(texto)
-
-        const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
-
-        window.open(url, '_blank')
-
-        }
-
-    </script>
 
 </body>
 
